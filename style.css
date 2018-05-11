@@ -18,6 +18,8 @@ body {
 body {
   font-family: Helvetica, sans-serif;
   line-height: 150%;
+  letter-spacing: 1px;
+  padding-top: 2em; 
   background: #b993d6;
   background: -webkit-linear-gradient(
     to right,
@@ -104,7 +106,6 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(236, 19, 19, 1);
@@ -120,7 +121,6 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -129,7 +129,6 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -146,8 +145,6 @@ hr {
   background-color: #17141f;
   width: 40%;
   overflow: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
   
 }
 
@@ -175,6 +172,14 @@ hr {
   box-shadow: none !important;
 }
 
+.sig {
+  text-align: center;
+  color: #201c2b;
+  padding: 1em;
+}
+
+
+/* Media Queries */
 @media (max-width: 1450px) {
   .container.main {
     width: 60%;
@@ -190,4 +195,3 @@ hr {
     margin: 0 auto;
   }
 }
-

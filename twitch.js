@@ -1,5 +1,7 @@
-$(document).ready(() => {
-  let streamers = [
+"use strict";
+
+$(() => {
+  const streamers = [
     "nl_kripp",
     "kitboga",
     "dansgaming",
@@ -10,11 +12,10 @@ $(document).ready(() => {
     "lethalfrag"
   ];
   let html = "";
-  let html2 = "";
   streamers.forEach(streamer => {
-    let url = "https://wind-bow.glitch.me/twitch-api/streams/" + streamer;
+    const url = "https://wind-bow.glitch.me/twitch-api/streams/" + streamer;
     $.getJSON(url, data => {
-      let strmDat = data.stream;
+      const strmDat = data.stream;
       if (strmDat != null) {
         html += '<div class="container-fluid streamers">';
         html += '<div class="row"><div class="col-sm-3">';
@@ -40,7 +41,7 @@ $(document).ready(() => {
 
         $("#streamers").html(html);
       } else {
-        let url = "https://wind-bow.glitch.me/twitch-api/channels/" + streamer;
+        const url = "https://wind-bow.glitch.me/twitch-api/channels/" + streamer;
         $.getJSON(url, data => {
           html += '<div class="container-fluid streamers offline">';
           html += '<div class="row"><div class="col-sm-3">';
